@@ -12,15 +12,11 @@ jobs:
   identifiers:
     name: Add Identifiers
     needs: validate
-    runs-on: macos-14
+    runs-on: macos-26
     steps:
-      # Uncomment to manually select latest Xcode if needed
-      #- name: Select Latest Xcode
-      #  run: "sudo xcode-select --switch /Applications/Xcode_13.0.app/Contents/Developer"
-      
       # Checks-out the repo
       - name: Checkout Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
